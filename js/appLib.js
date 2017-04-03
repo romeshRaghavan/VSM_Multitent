@@ -1012,6 +1012,7 @@ function resetUserSessionDetails(){
 	 window.localStorage.removeItem("LastName");
 	 window.localStorage.removeItem("UserName");
 	 window.localStorage.removeItem("Password");
+	 window.localStorage.removeItem("employeeType");
  
 	 dropAllTableDetails();
 }
@@ -1037,6 +1038,7 @@ function setUserSessionDetails(val,userJSON){
 	 window.localStorage.setItem("zone",val.zone);
 	 window.localStorage.setItem("UserName",userJSON["user"]);
 	 window.localStorage.setItem("Password",userJSON["pass"]);
+	 window.localStorage.setItem("employeeType",val.employeeType);
 }
 
 function setJsonToAppArray(){
@@ -1475,6 +1477,7 @@ function synchronizeTRForTS() {
 		jsonSentToSync["UnitId"] = window.localStorage.getItem("UnitId");
 		jsonSentToSync["moduleId"] = 3;
 		jsonSentToSync["processId"] = 6;
+		jsonSentToSync["companyId"] = window.localStorage.getItem("companyId");
 		j('#loading_Cat').show();
 		if (mydb) {
 			j.ajax({

@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.phonegap.vsm.Expenzing" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>ExpenzingVSMApp</name>
+<widget id="com.phonegap.vsm.Procure2Pay" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Procure2PayApp</name>
     <description>
         Expenzing Application
     </description>

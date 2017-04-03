@@ -1055,6 +1055,7 @@ function setJsonToAppArray(){
     jsonToAppSend["ccName"] = window.localStorage.getItem("ccName");
     jsonToAppSend["locationId"] = window.localStorage.getItem("locationId");
 	jsonToAppSend["locationName"] = window.localStorage.getItem("locationName");
+	jsonToAppSend["companyId"] = window.localStorage.getItem("companyId");
 
 	var delDate = jsonToAppSend["deliveryDate"];
 
@@ -1475,6 +1476,7 @@ function synchronizeTRForTS() {
 		jsonSentToSync["UnitId"] = window.localStorage.getItem("UnitId");
 		jsonSentToSync["moduleId"] = 3;
 		jsonSentToSync["processId"] = 6;
+		jsonSentToSync["companyId"] = window.localStorage.getItem("companyId");
 		j('#loading_Cat').show();
 		if (mydb) {
 			j.ajax({
@@ -1619,13 +1621,14 @@ function synchronizeTRForTS() {
 			});	
 		}
 	}
+
 	function synchronizePRMasterData() {
 		var jsonSentToSync=new Object();
 		
 		jsonSentToSync["BudgetingStatus"] = window.localStorage.getItem("budgetingStatus");
 		jsonSentToSync["EmployeeId"] = window.localStorage.getItem("EmployeeId");
 		jsonSentToSync["UnitId"] = window.localStorage.getItem("unitId");
-		
+		jsonSentToSync["companyId"] = window.localStorage.getItem("companyId");
 		j('#loading_Cat').show();
 		if (mydb) {
 
