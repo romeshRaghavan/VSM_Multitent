@@ -129,7 +129,7 @@ function goBackEvent() {
 					}else if(pg=="app/pages/prInvoice.html"){
 						if(confirmToGoBack()==false){
 							alert("goBackEvent");
-							if(confirm("All the filled in details will be deleted. Do you want to Proceed?")==false){
+							if(confirm("All the filled in details will be deleted. Do you want to Proceed?applib js")==false){
 								return false;
 							}else{
 									j(document).ready(function() {

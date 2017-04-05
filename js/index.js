@@ -200,7 +200,7 @@ function createPurchaseReq(){
     var pageRef=defaultPagePath+'prInvoice.html';
 	if(confirmToGoBack()==false){
 		alert("backToHome");
-		if(confirm("All the filled in details will be deleted. Do you want to Proceed?")==false){
+		if(confirm("All the filled in details will be deleted. Do you want to Proceed  index js ?")==false){
 			return false;
 		}else{
 			j(document).ready(function() {
