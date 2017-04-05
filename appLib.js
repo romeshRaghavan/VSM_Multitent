@@ -141,7 +141,6 @@ function goBackEvent() {
 						 pageRef=defaultPagePath+'prInvoice.html';
 						 headerBackBtn=defaultPagePath+'expenzingImageWithSyncPage.html';	
 						 j('#mainHeader').load(headerBackBtn);
-						 j('#mainContainer').load(pageRef);	
 						}else{						
 						 pageRef=defaultPagePath+'prInvoice.html';
 						 headerBackBtn=defaultPagePath+'expenzingImageWithSyncPage.html';	
