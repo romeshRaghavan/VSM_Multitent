@@ -93,8 +93,8 @@ function commanLogin(){
  	var domainName = userNameValue.split('@')[1];
 	var jsonToDomainNameSend = new Object();
 	jsonToDomainNameSend["userName"] = domainName;
-	jsonToDomainNameSend["mobilePlatform"] = device.platform;
-	//jsonToDomainNameSend["mobilePlatform"] = "Android";
+	//jsonToDomainNameSend["mobilePlatform"] = device.platform;
+	jsonToDomainNameSend["mobilePlatform"] = "Android";
   	//var res=JSON.stringify(jsonToDomainNameSend);
 	var requestPath = WebServicePath;
 	j.ajax({
@@ -205,7 +205,7 @@ function createPurchaseReq(){
 				//navigator.notification.confirm("Are you sure want to exit from App?", onConfirmExit, "Confirmation", "Yes,No");
 			}else{
 		var pg=appPageHistory[len-1];
-
+    
 	if(pg!="app/pages/prInvoice.html" && confirmToGoBack()==false){
 		if(confirm("All the filled in details will be deleted. Do you want to Proceed ?")==false){
 			return false;
@@ -214,14 +214,14 @@ function createPurchaseReq(){
 				j('#mainHeader').load(headerBackBtn);
 				j('#mainContainer').load(pageRef);
 			});
-      appPageHistory.push(pageRef);
+      appPageHistory.push(pg);
   	}			
 	}else{
 			j(document).ready(function() {
 				j('#mainHeader').load(headerBackBtn);
 				j('#mainContainer').load(pageRef);
 			});
-      appPageHistory.push(pageRef);
+      appPageHistory.push(pg);
   	}
   	  }
 	}
