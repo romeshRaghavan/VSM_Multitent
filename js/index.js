@@ -93,8 +93,8 @@ function commanLogin(){
  	var domainName = userNameValue.split('@')[1];
 	var jsonToDomainNameSend = new Object();
 	jsonToDomainNameSend["userName"] = domainName;
-	jsonToDomainNameSend["mobilePlatform"] = device.platform;
-	//jsonToDomainNameSend["mobilePlatform"] = "Android";
+	//jsonToDomainNameSend["mobilePlatform"] = device.platform;
+	jsonToDomainNameSend["mobilePlatform"] = "Android";
   	//var res=JSON.stringify(jsonToDomainNameSend);
 	var requestPath = WebServicePath;
 	j.ajax({
@@ -237,6 +237,33 @@ function createPurchaseReq(){
 		}else{
 			return true;
 		}
+	}
+
+
+	function confirmToGoBack(pg){
+			if(pg !="app/pages/expenzingImageWithSyncPage.html"){
+		if(jsonToAppSend["itemId"]!=""){
+			return false;
+		}else if(jsonToAppSend["itemCode"]!=""){
+			return false;
+		}else if(jsonToAppSend["itemName"]!=""){
+			return false;
+		}else if(jsonToAppSend["prTitle"]!=""){
+			return false;
+		}else if(jsonToAppSend["prquantity"]!=""){
+			return false;
+		}else if(jsonToAppSend["prrate"]!=""){
+			return false;
+		}else if(jsonToAppSend["deliveryDate"]!=""){
+			return false;
+		}else if(jsonToAppSend["narration"]!="" && jsonToAppSend["narration"]!=undefined){
+			return false;
+		}else{
+			return true;
+		}
+	  }else{
+	  	return true;
+	  }
 	}
 
 	 function createWallet(){
