@@ -213,7 +213,7 @@ function createPurchaseReq(){
 				j('#mainHeader').load(headerBackBtn);
 				j('#mainContainer').load(pageRef);
 			});
-      appPageHistory.push(headerBackBtn);
+      appPageHistory.push(pageRef);
   	}
 	}
 

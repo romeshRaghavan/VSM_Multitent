@@ -83,7 +83,7 @@ function goBack() {
 	}
  
 function goBackEvent() {
-	alert("goBackEvent")
+	
 	var currentUser=getUserID();
 	var pageRef=defaultPagePath+'prInvoice.html';
 	var loginPath=defaultPagePath+'loginPage.html';
@@ -137,6 +137,11 @@ function goBackEvent() {
 								});
 			      				appPageHistory.push(pageRef);
 		  					}			
+						}else if(pg=="app/pages/expenzingImagePage.html"){
+						 pageRef=defaultPagePath+'prInvoice.html';
+						 headerBackBtn=defaultPagePath+'expenzingImageWithSyncPage.html';	
+						 j('#mainHeader').load(headerBackBtn);
+						 j('#mainContainer').load(pageRef);	
 						}else{						
 						 pageRef=defaultPagePath+'prInvoice.html';
 						 headerBackBtn=defaultPagePath+'expenzingImageWithSyncPage.html';	
