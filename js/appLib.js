@@ -103,7 +103,7 @@ function goBackEvent() {
 			var len=appPageHistory.length;
 			if(len == 0){
 				navigator.app.exitApp();
-				//navigator.notification.confirm("Are you sure want to exit from App?", onConfirmExit, "Confirmation", "Yes,No");
+				navigator.notification.confirm("Are you sure want to exit from App?", onConfirmExit, "Confirmation", "Yes,No");
 			}else{
 					var pg=appPageHistory[len-1];
 					if(pg=="app/pages/addPurchaseReq.html"){ 
@@ -124,11 +124,9 @@ function goBackEvent() {
 						 headerBackBtn=defaultPagePath+'expenzingImageWithSyncPage.html';	
 						 j('#mainHeader').load(headerBackBtn);
 						 j('#mainContainer').load(pageRef);	
-					}
-					/*else if(pg=="app/pages/prInvoice.html"){
-						alert("goBackEvent");
+					}else if(pg=="app/pages/prInvoice.html"){
 						if(confirmToGoBack()==false){
-							if(confirm("All the filled in details will be deleted. Do you want to Proceed?")==false){
+							if(confirm("All the filled in details will be deleted. Do you want to Proceed app lib?")==false){
 								return false;
 							}else{
 									pageRef=defaultPagePath+'prInvoice.html';
@@ -139,14 +137,13 @@ function goBackEvent() {
 								});
 			      				appPageHistory.push(pageRef);
 		  					}			
-						}*/
-						else{						
+						}else{						
 						 pageRef=defaultPagePath+'prInvoice.html';
 						 headerBackBtn=defaultPagePath+'expenzingImageWithSyncPage.html';	
 						 j('#mainHeader').load(headerBackBtn);
 						 j('#mainContainer').load(pageRef);	
 						}
-					
+					}
 			}
 		}
 	}

@@ -93,8 +93,8 @@ function commanLogin(){
  	var domainName = userNameValue.split('@')[1];
 	var jsonToDomainNameSend = new Object();
 	jsonToDomainNameSend["userName"] = domainName;
-	//jsonToDomainNameSend["mobilePlatform"] = device.platform;
-	jsonToDomainNameSend["mobilePlatform"] = "Android";
+	jsonToDomainNameSend["mobilePlatform"] = device.platform;
+	//jsonToDomainNameSend["mobilePlatform"] = "Android";
   	//var res=JSON.stringify(jsonToDomainNameSend);
 	var requestPath = WebServicePath;
 	j.ajax({
@@ -199,7 +199,6 @@ function createPurchaseReq(){
 	var headerBackBtn=defaultPagePath+'expenzingImageWithSyncPage.html';
     var pageRef=defaultPagePath+'prInvoice.html';
 	if(confirmToGoBack()==false){
-		alert("backToHome");
 		if(confirm("All the filled in details will be deleted. Do you want to Proceed  index js ?")==false){
 			return false;
 		}else{
