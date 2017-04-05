@@ -198,8 +198,15 @@ function createPurchaseReq(){
 	function backToHome(){
 	var headerBackBtn=defaultPagePath+'expenzingImageWithSyncPage.html';
     var pageRef=defaultPagePath+'prInvoice.html';
-	if(confirmToGoBack()==false){
-		if(confirm("All the filled in details will be deleted. Do you want to Proceed  index js ?")==false){
+    var len=appPageHistory.length;
+			if(len == 0){
+				navigator.app.exitApp();
+				//navigator.notification.confirm("Are you sure want to exit from App?", onConfirmExit, "Confirmation", "Yes,No");
+			}else{
+		var pg=appPageHistory[len-1];
+		
+	if(pg!="app/pages/prInvoice.html" && confirmToGoBack()==false){
+		if(confirm("All the filled in details will be deleted. Do you want to Proceed ?")==false){
 			return false;
 		}else{
 			j(document).ready(function() {
@@ -215,6 +222,7 @@ function createPurchaseReq(){
 			});
       appPageHistory.push(pageRef);
   	}
+  	  }
 	}
 
 	function confirmToGoBack(){
