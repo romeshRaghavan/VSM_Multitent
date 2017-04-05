@@ -124,7 +124,9 @@ function goBackEvent() {
 						 headerBackBtn=defaultPagePath+'expenzingImageWithSyncPage.html';	
 						 j('#mainHeader').load(headerBackBtn);
 						 j('#mainContainer').load(pageRef);	
-					}else if(pg=="app/pages/prInvoice.html"){
+					}
+					/*else if(pg=="app/pages/prInvoice.html"){
+						alert("goBackEvent");
 						if(confirmToGoBack()==false){
 							if(confirm("All the filled in details will be deleted. Do you want to Proceed?")==false){
 								return false;
@@ -137,13 +139,14 @@ function goBackEvent() {
 								});
 			      				appPageHistory.push(pageRef);
 		  					}			
-						}else{						
+						}*/
+						else{						
 						 pageRef=defaultPagePath+'prInvoice.html';
 						 headerBackBtn=defaultPagePath+'expenzingImageWithSyncPage.html';	
 						 j('#mainHeader').load(headerBackBtn);
 						 j('#mainContainer').load(pageRef);	
 						}
-					}
+					
 			}
 		}
 	}
