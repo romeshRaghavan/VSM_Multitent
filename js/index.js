@@ -199,6 +199,7 @@ function createPurchaseReq(){
 	var headerBackBtn=defaultPagePath+'expenzingImageWithSyncPage.html';
     var pageRef=defaultPagePath+'prInvoice.html';
 	if(confirmToGoBack()==false){
+		alert("backToHome");
 		if(confirm("All the filled in details will be deleted. Do you want to Proceed?")==false){
 			return false;
 		}else{

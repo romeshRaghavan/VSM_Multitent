@@ -107,7 +107,7 @@ function goBackEvent() {
 				//navigator.notification.confirm("Are you sure want to exit from App?", onConfirmExit, "Confirmation", "Yes,No");
 			}else{
 					var pg=appPageHistory[len-1];
-					alert(pg+" pg")
+					alert(pg+" pg");
 					if(pg=="app/pages/addPurchaseReq.html"){ 
 							 backBtn = true;
 							 pageRef=defaultPagePath+'addPurchaseReq.html';
@@ -128,6 +128,7 @@ function goBackEvent() {
 						 j('#mainContainer').load(pageRef);	
 					}else if(pg=="app/pages/prInvoice.html"){
 						if(confirmToGoBack()==false){
+							alert("goBackEvent");
 							if(confirm("All the filled in details will be deleted. Do you want to Proceed?")==false){
 								return false;
 							}else{
