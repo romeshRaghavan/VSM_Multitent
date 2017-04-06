@@ -1999,13 +1999,13 @@ function validateEasyPrDetails(status){
 			var amnt=parseFloat(prQtty)*parseFloat(prRate);
 			var totalValue=amnt.toFixed(2);	
 			if(parseFloat(totalValue) > 1000000000.00){
-				document.getElementById("prquantity").value='';
+				document.getElementById("prrate").value='';
 				alert("Total Amount cannot be greater than 1000000000.00");
 				return false;
 			}else if(prRate.indexOf(".") != -1){
 				if(prRate.indexOf(".") > 10){
 					alert("Total Amount cannot be greater than 1000000000.00");
-					document.getElementById("prquantity").value='';
+					document.getElementById("prrate").value='';
 					return false;
 				}else{
 					return true;
