@@ -214,14 +214,14 @@ function createPurchaseReq(){
 				j('#mainHeader').load(headerBackBtn);
 				j('#mainContainer').load(pageRef);
 			});
-      appPageHistory.push(pg);
+      //appPageHistory.push(pageRef);
   	}			
 	}else{
 			j(document).ready(function() {
 				j('#mainHeader').load(headerBackBtn);
 				j('#mainContainer').load(pageRef);
 			});
-      appPageHistory.push(pg);
+      appPageHistory.push(pageRef);
   	}
   	  }
 	}
