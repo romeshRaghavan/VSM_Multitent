@@ -108,6 +108,7 @@ function goBackEvent() {
 					var pg=appPageHistory[len-1];
 					var currentPage=appPageHistory[len];
 					alert("page "+pg);
+					alert("current page"+currentPage);
 					if(pg=="app/pages/addPurchaseReq.html"){ 
 							 backBtn = true;
 							 pageRef=defaultPagePath+'addPurchaseReq.html';
