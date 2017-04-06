@@ -199,6 +199,7 @@ function createPurchaseReq(){
 	var headerBackBtn=defaultPagePath+'expenzingImageWithSyncPage.html';
     var pageRef=defaultPagePath+'prInvoice.html';
     var len=appPageHistory.length;
+    appPageHistory.length = 0;
 
 			if(len == 0){
 				navigator.app.exitApp();
@@ -214,7 +215,7 @@ function createPurchaseReq(){
 				j('#mainHeader').load(headerBackBtn);
 				j('#mainContainer').load(pageRef);
 			});
-      //appPageHistory.push(pageRef);
+      appPageHistory.push(pageRef);
   	}			
 	}else{
 			j(document).ready(function() {
