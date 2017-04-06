@@ -135,7 +135,8 @@ function goBackEvent() {
 									j('#mainHeader').load(headerBackBtn);
 									j('#mainContainer').load(pageRef);
 								});
-			      				appPageHistory.push(pageRef);
+			      				//appPageHistory.push(pageRef);
+			      				appPageHistory.length = 0;
 		  					}			
 						}else{						
 						 pageRef=defaultPagePath+'prInvoice.html';
