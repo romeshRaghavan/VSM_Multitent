@@ -106,9 +106,8 @@ function goBackEvent() {
 				//navigator.notification.confirm("Are you sure want to exit from App?", onConfirmExit, "Confirmation", "Yes,No");
 			}else{
 					var pg=appPageHistory[len-1];
-					var currentPage=appPageHistory[len];
-					alert("page "+pg);
-					alert("current page"+currentPage);
+					var currentPage=appPageHistory[historylength];
+					alert("currentPage"+currentPage);
 					if(pg=="app/pages/addPurchaseReq.html"){ 
 							 backBtn = true;
 							 pageRef=defaultPagePath+'addPurchaseReq.html';
